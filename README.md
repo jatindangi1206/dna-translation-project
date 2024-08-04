@@ -21,7 +21,7 @@ This project provides a web application for translating and analyzing DNA and RN
 - `.gitignore`: The file specifying which files should be ignored by Git.
 
   
-### How to Run the App
+# How to Run the App
 
 #### Prerequisites
 - Python 3.x
@@ -34,7 +34,7 @@ This project provides a web application for translating and analyzing DNA and RN
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/dna-translation.git
+    git clone https://github.com/jatindangi1206/dna-translation-project.git
     cd dna-translation
     ```
 
