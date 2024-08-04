@@ -17,15 +17,17 @@ This project provides a web application for translating and analyzing DNA and RN
 - `app.py`: The main Python application file.
 - `index.html`: The HTML file for the web interface.
 - `Dockerfile`: The Dockerfile to build and run the application in a containerized environment.
+- `styles.css`: The CSS file for styling the web interface.
+- `.gitignore`: The file specifying which files should be ignored by Git.
 
+  
 ### How to Run the App
 
 #### Prerequisites
 - Python 3.x
 - Flask
 - Docker (optional, for containerized setup)
-- `styles.css`: The CSS file for styling the web interface.
-- `.gitignore`: The file specifying which files should be ignored by Git.
+
 
 
 #### Running Locally
