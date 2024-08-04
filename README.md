@@ -9,23 +9,17 @@ DNA translation is a fundamental process in molecular biology where the genetic 
 3. **Protein Synthesis**: The ribosome assembles the amino acids into a polypeptide chain, forming a protein.
 
 
-
-### Project Overview
-This project provides a web application for translating and analyzing DNA and RNA sequences. You can input sequences directly or upload them via FASTA files.
-
-### Files Included
-- `app.py`: The main Python application file.
-- `index.html`: The HTML file for the web interface.
-- `Dockerfile`: The Dockerfile to build and run the application in a containerized environment.
-- `styles.css`: The CSS file for styling the web interface.
-- `.gitignore`: The file specifying which files should be ignored by Git.
-
   
 # How to Run the App
 
 #### Prerequisites
 - Python 3.x
 - Flask
+  ```bash - if you do not have these
+    pip install python
+    pip install flask
+    ```
+  
 - Docker (optional, for containerized setup)
 
 
