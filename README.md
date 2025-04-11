@@ -1,5 +1,3 @@
-
-
 # 🌟 DNA Translation Project 🌟
 
 ### 🧬 Introduction to DNA Translation
@@ -93,3 +91,76 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 For any questions or feedback, please contact [jatin.dangi_ug24@ashoka.edu.in](mailto:jatin.dangi_ug24@ashoka.edu.in).
 
 ---
+
+### 🌐 Deploying on GitHub Pages
+
+1. **Create a GitHub Repository**
+    - If you haven't already, create a new repository on GitHub and push your project to it.
+
+2. **Install `ghp-import`**
+    ```bash
+    pip install ghp-import
+    ```
+
+3. **Build the Static Files**
+    ```bash
+    flask freeze
+    ```
+
+4. **Deploy to GitHub Pages**
+    ```bash
+    ghp-import -n -p -f build
+    ```
+
+5. **Enable GitHub Pages**
+    - Go to your repository settings on GitHub.
+    - Under the "Pages" section, select the branch and folder where your static files are located (usually `gh-pages` branch and `/` folder).
+
+---
+
+### ⚙️ Configuring GitHub Actions for Automatic Deployment
+
+1. **Create a GitHub Actions Workflow**
+    - In your repository, create a `.github/workflows` directory if it doesn't exist.
+    - Create a new file named `deploy.yml` in the `.github/workflows` directory.
+
+2. **Add the Following Content to `deploy.yml`**
+    ```yaml
+    name: Deploy to GitHub Pages
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.x
+
+        - name: Install dependencies
+          run: |
+            python -m pip install --upgrade pip
+            pip install flask ghp-import
+
+        - name: Build static files
+          run: flask freeze
+
+        - name: Deploy to GitHub Pages
+          run: |
+            ghp-import -n -p -f build
+    ```
+
+3. **Commit and Push**
+    - Commit and push the `deploy.yml` file to your repository.
+
+4. **Automatic Deployment**
+    - GitHub Actions will automatically build and deploy your app to GitHub Pages whenever you push changes to the `main` branch.

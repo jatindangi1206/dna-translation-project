@@ -3,3 +3,4 @@ flask-cors
 biopython
 matplotlib
 gunicorn
+ghp-import
